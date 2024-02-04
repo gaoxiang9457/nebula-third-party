@@ -6,9 +6,9 @@ set(name wangle)
 set(source_dir ${CMAKE_CURRENT_BINARY_DIR}/${name}/source)
 ExternalProject_Add(
     ${name}
-    URL https://github.com/facebook/wangle/archive/refs/tags/v2021.11.29.00.tar.gz
-    URL_HASH MD5=b17946086b602a5d565c5a084eb2c337
-    DOWNLOAD_NAME wangle-2021-11-29.tar.gz
+    URL https://github.com/facebook/wangle/archive/refs/tags/v2022.12.26.00.tar.gz
+    URL_HASH MD5=8e3200855c6382bf40ec2051e467cdab
+    DOWNLOAD_NAME wangle-2022-12-26.tar.gz
     PREFIX ${CMAKE_CURRENT_BINARY_DIR}/${name}
     TMP_DIR ${BUILD_INFO_DIR}
     STAMP_DIR ${BUILD_INFO_DIR}
@@ -33,8 +33,7 @@ ExternalProject_Add_Step(${name} mannual-configure
         -DCMAKE_BUILD_TYPE=Release
         -DBUILD_TESTS=OFF
         -DCMAKE_EXE_LINKER_FLAGS=-latomic
-        -DCMAKE_SHARED_LINKER_FLAGS=-latomic
-        -D_OPENSSL_LIBDIR=${CMAKE_INSTALL_PREFIX}/${CMAKE_INSTALL_LIBDIR}
+        -DOPENSSL_ROOT_DIR=${CMAKE_INSTALL_PREFIX}
         .
     WORKING_DIRECTORY <SOURCE_DIR>/wangle
 )
