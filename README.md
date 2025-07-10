@@ -37,6 +37,7 @@
  * simdjson
  * snappy
  * sodium
+ * tomlplusplus
  * valijson
  * wangle
  * yaml-cpp
@@ -48,6 +49,8 @@
  * duckdb
  * utf8proc
  * apache-arrow
+ * cppjieba
+ * limonp
 
 # How to Build
 
