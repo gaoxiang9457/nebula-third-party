@@ -38,6 +38,7 @@ RUN dnf install -y make \
                    ninja-build \
                    texinfo \
                    file \
+                   lsb-release \
    && dnf clean all && rm -rf /var/cache/dnf
 
 # Install cmake
