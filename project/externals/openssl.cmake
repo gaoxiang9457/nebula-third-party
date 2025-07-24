@@ -16,8 +16,8 @@ endif()
 
 ExternalProject_Add(
     ${name}
-    URL https://github.com/openssl/openssl/archive/refs/tags/OpenSSL_1_1_1s.tar.gz
-    URL_HASH MD5=7e79a7560dee77c0758baa33c61af4b4
+    https://github.com/openssl/openssl/archive/refs/tags/openssl-3.5.1.tar.gz
+    URL_HASH MD5=562a4e8d14ee5272f677a754b9c1ca5c
     DOWNLOAD_NAME openssl-1.1.1s.tar.gz
     PREFIX ${CMAKE_CURRENT_BINARY_DIR}/${name}
     TMP_DIR ${BUILD_INFO_DIR}
