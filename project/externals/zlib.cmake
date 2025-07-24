@@ -8,7 +8,7 @@ ExternalProject_Add(
     ${name}
     URL ${CMAKE_SOURCE_DIR}/externals/zlib-1.3.1.tar.gz
     #URL https://github.com/madler/zlib/archive/refs/tags/v1.2.13.tar.gz
-    URL_HASH MD5=9c7d356c5acaa563555490676ca14d23
+    #URL_HASH MD5=9c7d356c5acaa563555490676ca14d23
     DOWNLOAD_NAME zlib-1.2.13.tar.gz
     PREFIX ${CMAKE_CURRENT_BINARY_DIR}/${name}
     TMP_DIR ${BUILD_INFO_DIR}
