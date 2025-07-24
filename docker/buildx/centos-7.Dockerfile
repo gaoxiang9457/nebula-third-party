@@ -34,6 +34,9 @@ RUN sed -i 's/^mirrorlist=/#mirrorlist=/g' /etc/yum.repos.d/CentOS-Base.repo && 
                    gperf \
                    gettext \
                    ninja-build \
+                   ccache \
+                   dos2unix \
+                   perl-IPC-Cmd \
                 && yum clean all \
                 && rm -rf /var/cache/yum
 RUN if ! [ -x "$(command -v ninja)" ]; then ln -s $(which ninja-build) /usr/bin/ninja; fi
