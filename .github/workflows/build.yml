@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - master
+      - gjf
     paths-ignore:
       - 'docker/buildx/**.Dockerfile'
   workflow_run:
