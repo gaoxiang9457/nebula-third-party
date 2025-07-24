@@ -12,6 +12,7 @@ on:
       - docker
     branches:
       - master
+      - gjf
     types:
       - completed
     conclusion: success
