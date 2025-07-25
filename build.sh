@@ -83,8 +83,8 @@ cxx_cmd=${CXX:-g++}
 gcc_version=$(${CXX:-g++} -dumpfullversion -dumpversion)
 abi_version=$($this_dir/cxx-compiler-abi-version.sh)
 libc_version=$(ldd --version | head -1 | cut -d ' ' -f4 | cut -d '-' -f1)
-export CC="ccache gcc"
-export CXX="ccache g++"
+#export CC="ccache gcc"
+#export CXX="ccache g++"
 
 export PATH=$install_dir/bin:$PATH
 export PKG_CONFIG_PATH=$install_dir/lib/pkgconfig:$install_dir/lib64/pkgconfig:$PKG_CONFIG_PATH
