@@ -6,9 +6,9 @@ set(name zlib)
 set(source_dir ${CMAKE_CURRENT_BINARY_DIR}/${name}/source)
 ExternalProject_Add(
     ${name}
-    URL https://github.com/madler/zlib/archive/v1.2.11.tar.gz
-    URL_HASH MD5=0095d2d2d1f3442ce1318336637b695f
-    DOWNLOAD_NAME zlib-1.2.11.tar.gz
+    URL https://github.com/madler/zlib/archive/refs/tags/v1.3.2.tar.gz
+    URL_HASH MD5=d092e353ab96ab0d43384638f8ea0b41
+    DOWNLOAD_NAME zlib-1.3.2.tar.gz
     PREFIX ${CMAKE_CURRENT_BINARY_DIR}/${name}
     TMP_DIR ${BUILD_INFO_DIR}
     STAMP_DIR ${BUILD_INFO_DIR}
