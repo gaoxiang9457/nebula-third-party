@@ -20,9 +20,9 @@ endif()
 
 ExternalProject_Add(
     ${name}
-    URL https://boostorg.jfrog.io/artifactory/main/release/1.76.0/source/boost_1_76_0.tar.gz
-    URL_HASH MD5=e425bf1f1d8c36a3cd464884e74f007a
-    DOWNLOAD_NAME boost-1.76.0.tar.gz
+    URL https://cytranet.dl.sourceforge.net/project/boost/boost/1.81.0/boost_1_81_0.tar.gz
+    URL_HASH MD5=4bf02e84afb56dfdccd1e6aec9911f4b
+    DOWNLOAD_NAME boost-1.81.0.tar.gz
     PREFIX ${CMAKE_CURRENT_BINARY_DIR}/${name}
     TMP_DIR ${BUILD_INFO_DIR}
     STAMP_DIR ${BUILD_INFO_DIR}
@@ -31,7 +31,7 @@ ExternalProject_Add(
     CONFIGURE_COMMAND
         ./bootstrap.sh
             --without-icu
-            --with-libraries=context,thread,system,filesystem,program_options,regex,iostreams,date_time,python
+            --with-libraries=context,thread,system,filesystem,graph,program_options,regex,iostreams,date_time,python
             --prefix=${CMAKE_INSTALL_PREFIX}
 #--without-libraries=wave,nowide,chrono,atomic,fiber,type_erasure,exception,timer,contract,math,locale,json,test,stacktrace,mpi,log,graph,graph_parallel
     BUILD_COMMAND
