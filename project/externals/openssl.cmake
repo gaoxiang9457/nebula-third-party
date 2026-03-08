@@ -12,7 +12,7 @@ if (${CMAKE_HOST_SYSTEM_PROCESSOR} STREQUAL "mips64")
         "no-shared"
     )
 else()
-    set(openssl_config_command "./config no-shared")
+    set(openssl_config_command "./config")
 endif()
 
 ExternalProject_Add(
