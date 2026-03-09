@@ -9,9 +9,12 @@ if (${CMAKE_HOST_SYSTEM_PROCESSOR} STREQUAL "mips64")
     set(openssl_config_command
         "./Configure"
         "linux64-mips64"
+        "no-shared"
+        "no-legacy"
+        "--libdir=lib"
     )
 else()
-    set(openssl_config_command "./config")
+    set(openssl_config_command "./config" "no-shared" "no-legacy" "--libdir=lib")
 endif()
 
 ExternalProject_Add(
