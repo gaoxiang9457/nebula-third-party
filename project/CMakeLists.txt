@@ -32,7 +32,7 @@ include(cmake/ExternalProjectGit.cmake)
 
 # Get number of physical CPU cores and megabytes of available memory
 if ("${CMAKE_HOST_SYSTEM_PROCESSOR}" STREQUAL "x86_64")
-    cmake_host_system_information(RESULT num_cores QUERY NUMBER_OF_PHYSICAL_CORES)
+    cmake_host_system_information(RESULT num_cores QUERY NUMBER_OF_LOGICAL_CORES)
 elseif ("${CMAKE_HOST_SYSTEM_PROCESSOR}" STREQUAL "aarch64" OR "${CMAKE_HOST_SYSTEM_PROCESSOR}" STREQUAL "mips64")
     cmake_host_system_information(RESULT num_cores QUERY NUMBER_OF_LOGICAL_CORES)
 endif()
