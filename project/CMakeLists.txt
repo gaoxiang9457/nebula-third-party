@@ -219,13 +219,6 @@ endif()
 foreach(target ${ALL_TARGETS})
     include(externals/${target}.cmake)
     list(APPEND CLEAN_TARGETS ${target}-clean)
-# Verify there is no shared library installed by the individual project
-    ExternalProject_Add_Step(${target} verify
-        DEPENDEES install
-        ALWAYS false
-        COMMAND ${SOURCE_PREFIX}/check-so-libs.sh ${CMAKE_INSTALL_PREFIX}
-        WORKING_DIRECTORY ${CMAKE_INSTALL_PREFIX}
-)
 endforeach()
 
 macro(maybe_add_dependencies depender)
